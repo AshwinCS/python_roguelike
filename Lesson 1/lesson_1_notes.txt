@@ -1,0 +1,14 @@
+Plan your game out as much as possible on paper
+
+Goals for our game:
+
+
+1.) Our game is going to be turn based.
+2.) Our game is going to be a dungeon crawler - with 10 levels.
+3.) We will have a player character
+4.) We will have two different types of enemies with different AI types for each one.
+5.) A few items and spells
+6.) Tile based graphical system using PyGame.
+	5a.) At first these will be limited tiles
+	5b.) We will upgrade to animated sprites
+7.) Sound effects and music.

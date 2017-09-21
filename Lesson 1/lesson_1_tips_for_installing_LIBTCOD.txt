@@ -1,0 +1,28 @@
+Tips for installing LIBTCOD:
+
+Go to where your Python installation is:
+Open The python folder inside of your unzipped, downloaded libtcod folder.
+
+
+3 Steps to Libtcod:
+
+1.)
+
+Copy this folder to 'site packages' in your Python installation.
+
+On my machine:
+Installed libtcod-1.6.3-msvs-Win32
+
+Copy the folder 'libtcodpy' from Libtcod\Python to:
+(My machine: C:\Users\Luke\Desktop\20170226-libtcod-1.6.3-msvs-x64\libtcod-msvs-x64\python\libtcodpy)
+
+TO:
+
+C:\Users\Luke\AppData\Local\Programs\Python\Python36\Lib\site-packages\libtcodpy
+
+
+2.) Copy SDL2.dll
+
+SDL2.dll (From Libtcod folder) to the folder you are making your game in 
+
+3.) Copy libtcod.dll (From Libtcod folder) to whatever folder you are making the game in.
