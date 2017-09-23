@@ -1,0 +1,34 @@
+We are going to create a new section of our code called "objects."  Here we are going to create some classes.
+
+The Actor:
+
+
+We are going to create a class called 'actor' or 'obj_Actor.'  The Unreal Engine calls anything that can interact with a scene a "actor."  We will follow the same convention.
+
+
+The only thing our actor will do (for now) is have a method to be drawn and a method to be moved around.
+
+The Actor draws itself:
+
+We don't want to duplicate code. We don't want to have to write out how to draw everything in the game over and over again inside of draw_game().
+
+Instead we allow objects to draw themselves.
+
+First we remove SURFACE_MAIN.blit(constants.S_PLAYER, (200, 200)) and move it into our new 'obj_Actor' classes draw method draw(self).
+
+Instead of using constants in our draw method -- we now use locations of the map.
+
+We convert map locations to pixel addresses by multiplying the map address by the constants.CELL_WIDTH or constants.CELL_HEIGHT.
+
+
+The Actor moves:
+def move(self, dx, dy):
+dx = distance to move x.  dy = distance to move y.  We look where the character wants to move (1 tile only) and see if there is a wall there.
+
+###################################
+Add Input to game:
+	
+Use pygame's KEYDOWN event to see if the user pressed a key.  K_UP means the player pressed the up arrow.  K_DOWN means the down arrow. etc. 
+	
+We add this input check to the game_main_loop()
+Right below where we check if someone closed the pygame window.
