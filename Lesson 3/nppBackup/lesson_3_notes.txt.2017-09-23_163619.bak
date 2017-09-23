@@ -34,4 +34,4 @@ The map is created with the function draw map.
 Drawing the map:
 We need to translate the map coordinates to pixel locations.
 
-We define the cell width and height in our constants.py file.  Using the global CELL_WIDTH.
+We define the cell width and height in our constants.py file.

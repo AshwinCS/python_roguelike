@@ -1,0 +1,18 @@
+C has a Struct - a class with no methods - only variables.
+
+Python we are going to use Structs (Structures) to build our map.
+
+Ways to build a Map:
+
+1.) A physics based map - like a AAA game.
+	--Actually create objects that have physics attached to them
+	--Map is an object that has its own physics
+	--Things like
+	
+2.) Address based system
+	--What we are going to use
+	--A map you can read like an atlas
+	--Map is an array with information on what is on the map where.
+
+Tile Struct:
+	--Where we store information about the tiles.
