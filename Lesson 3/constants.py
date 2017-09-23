@@ -35,5 +35,5 @@ COLOR_DEFAULT_BG = COLOR_GREY
 
 #character
 S_PLAYER = pygame.image.load('data/python.png')
-S_WALL = pygame.image.load('data/python.png')
-S_FLOOR = pygame.image.load('data/pyhon.png')
+S_WALL = pygame.image.load('data/wall.png')
+S_FLOOR = pygame.image.load('data/floor.jpg')
