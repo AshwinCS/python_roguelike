@@ -1,0 +1,16 @@
+How are we going to structure our objects in the game?
+
+
+We could structure the objects in our game as a strict inheritance system:
+
+Parents--->Children
+
+
+vs.
+
+
+Or we could choose a "component system"
+
+Component System--> more like a Ecosystem
+
+Actor 

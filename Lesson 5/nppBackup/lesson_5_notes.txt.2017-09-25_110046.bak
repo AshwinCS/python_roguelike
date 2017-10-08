@@ -1,0 +1,19 @@
+How are we going to structure our objects in the game?
+
+
+We could structure the objects in our game as a strict inheritance system:
+
+Parents--->Children
+A top-down style method.
+
+vs.
+
+
+Or we could choose a "component system"
+
+Component System--> more like a Ecosystem
+In a compontent system we 'glue on' components to different classes. A more bottom up method.
+
+Remember: We are calling an "Actor" anything that interacts with the game.
+
+In

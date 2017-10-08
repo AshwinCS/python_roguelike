@@ -1,0 +1,36 @@
+How are we going to structure our objects in the game?
+
+
+We could structure the objects in our game as a strict inheritance system:
+
+Parents--->Children
+A top-down style method.
+All children inherit the code from the parents.
+
+Example: Actor (parent) --> Item (child) - Characters (Child) -- Containers (Child)
+Then these children parent their own children:
+Actor --> Item --> Potions -- Scrolls -- Weapons
+Actor --> Characters --> Player -- Enemies 
+etc.
+
+
+vs.
+
+
+An inheritance system can quickly turn into a hot-mess.
+
+Or we could choose a "component system"
+We 'glue on' parts of 
+Component System--> more like a Ecosystem
+In a compontent system we 'glue on' components to different classes. A more bottom up method.
+
+There is no parent - child relationship.
+
+Objects do not inherit code from their parents. There are no parents.
+
+example: Player = Actor()
+we pass lot's of different components to Player.  Player gets passed Creature, 
+
+Remember: We are calling an "Actor" anything that interacts with the game.
+
+In

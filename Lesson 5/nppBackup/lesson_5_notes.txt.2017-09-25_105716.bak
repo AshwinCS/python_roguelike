@@ -1,0 +1,7 @@
+How are we going to structure our objects in the game?
+
+
+One option is an inheritance method:
+
+Parents--->Children
+
