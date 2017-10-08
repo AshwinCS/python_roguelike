@@ -1,13 +1,22 @@
-Header experiments:
+<h1> Lesson 5 </h1>
 
-# H1 This is like an H1 Tag
-<h1> I used an actual H1 Tag</h1>
+<h2> How to structure the 'objects' in our game </h2>
 
-## This is like an H2 tag
-<h2> I used an actual H2 Tag</h2>
 
-### This would be H3
-<h3> Actual H3 </h3>
+<h3> Two options: </h3>
 
-#### This is H4 
-<h4> Actual h4 tag </h4>
+<b> First Option </b> is a strict inheritence system:
+
+Parents ----> Children
+This is a very 'top down' style method.
+All children inherit the code from their parents.
+
+<h3> Example: </h3>
+
+<table>
+<tr>
+	<td>Actor (parent)</td>
+	<td>Item (child) </td>
+	<td>Characters (child) </td>
+</tr>
+
