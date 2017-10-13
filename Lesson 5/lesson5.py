@@ -5,6 +5,7 @@ import libtcodpy as libtcod
 # game files
 import constants
 
+
  # ________  _________  ________  ___  ___  ________ _________
 # |\   ____\|\___   ___\\   __  \|\  \|\  \|\   ____\\___   ___\
 # \ \  \___|\|___ \  \_\ \  \|\  \ \  \\\  \ \  \___\|___ \  \_|
@@ -27,6 +28,18 @@ class struc_Tile:
 # |  |  |  | |   _  <  .--.  |  | |   __|  |  |         |  |        \   \
 # |  `--'  | |  |_)  | |  `--'  | |  |____ |  `----.    |  |    .----)   |
  # \______/  |______/   \______/  |_______| \______|    |__|    |_______/
+
+
+#  ______   ______   .___  ___. .______     ______   .__   __.  _______ .__   __. .___________.    _______.
+# /      | /  __  \  |   \/   | |   _  \   /  __  \  |  \ |  | |   ____||  \ |  | |           |   /       |
+#|  ,----'|  |  |  | |  \  /  | |  |_)  | |  |  |  | |   \|  | |  |__   |   \|  | `---|  |----`  |   (----`
+#|  |     |  |  |  | |  |\/|  | |   ___/  |  |  |  | |  . `  | |   __|  |  . `  |     |  |        \   \    
+#|  `----.|  `--'  | |  |  |  | |  |      |  `--'  | |  |\   | |  |____ |  |\   |     |  |    .----)   |   
+# \______| \______/  |__|  |__| | _|       \______/  |__| \__| |_______||__| \__|     |__|    |_______/    
+                                                                           
+def com_Creature:
+def com_Items:
+def com_Container:                               
 class obj_Actor:
     """Our basic actor object."""
 
@@ -94,8 +107,9 @@ def draw_game():
     # draw the map
     draw_map(GAME_MAP)
 
-    #draw the character
-    PLAYER.draw()
+    #draw the characters
+    PLAYER.draw()    
+    ENEMY.draw()        
 
     # update the display
     pygame.display.flip()
@@ -143,7 +157,7 @@ def game_main_loop():
 def game_initialize():
     """This function initializes the main window, and pygame"""
 
-    global SURFACE_MAIN, GAME_MAP, PLAYER
+    global SURFACE_MAIN, GAME_MAP, PLAYER, ENEMY
     # initialize pygame
     pygame.init()
 
@@ -152,10 +166,11 @@ def game_initialize():
     # Ideally the surface should be resizable -- we are going to skip this for now
 
     GAME_MAP = map_create() # Create the game map. Fills the 2D array with values.
-
+    
     PLAYER = obj_Actor(0, 0, constants.S_PLAYER)
+    ENEMY = obj_Actor(15, 15, constants.S_ENEMY)
 
-    ENEMY = obj_Actor(10, 10, constants.S_ENEMY)
+    
 
  # .     *        .    *       ________________ _      .    ____      *
      # *     .       .     .  <-_______________|*) .  ___==/    \==___
