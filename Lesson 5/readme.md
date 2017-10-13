@@ -83,13 +83,8 @@ To implement our 'mind controll spell' all we need to do is pass (glue on) a "AI
 the crab will display on top of the Player.  If PLAYER.draw() is called before ENEMY.draw() the player will display on top of the evil, hated crab. 
 </p>
 <code>
+'''python
 def draw_game():
-   # _____          __  __ ______
-  # / ____|   /\   |  \/  |  ____|
- # | |  __   /  \  | \  / | |__
- # | | |_ | / /\ \ | |\/| |  __|
- # | |__| |/ ____ \| |  | | |____
-
 
     global SURFACE_MAIN
 
@@ -105,6 +100,7 @@ def draw_game():
 
     # update the display
     pygame.display.flip()
+'''
 </code>
 
 <h3> Make sure to draw the player on top of all other characters </h3>
@@ -121,15 +117,9 @@ Start the names of each compnent classes with com_
 	<li>com_Container</li>
 </ol>
 <code>
-#  ______   ______   .___  ___. .______     ______   .__   __.  _______ .__   __. .___________.    _______.
-# /      | /  __  \  |   \/   | |   _  \   /  __  \  |  \ |  | |   ____||  \ |  | |           |   /       |
-#|  ,----'|  |  |  | |  \  /  | |  |_)  | |  |  |  | |   \|  | |  |__   |   \|  | `---|  |----`  |   (----`
-#|  |     |  |  |  | |  |\/|  | |   ___/  |  |  |  | |  . `  | |   __|  |  . `  |     |  |        \   \    
-#|  `----.|  `--'  | |  |  |  | |  |      |  `--'  | |  |\   | |  |____ |  |\   |     |  |    .----)   |   
-# \______| \______/  |__|  |__| | _|       \______/  |__| \__| |_______||__| \__|     |__|    |_______/    
-                                                                           
-def com_Creature:
-def com_Items:
-def com_Container:  
+'''python
+Class com_Creature:
+Class com_Items:
+Class com_Container:  
 </code>
 

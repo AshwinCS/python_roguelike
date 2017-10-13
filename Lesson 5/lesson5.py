@@ -22,13 +22,6 @@ class struc_Tile:
 # if tile is True player can NOT walk over it.
 
 
-  # ______   .______          __   _______   ______ .___________.    _______.
- # /  __  \  |   _  \        |  | |   ____| /      ||           |   /       |
-# |  |  |  | |  |_)  |       |  | |  |__   |  ,----'`---|  |----`  |   (----`
-# |  |  |  | |   _  <  .--.  |  | |   __|  |  |         |  |        \   \
-# |  `--'  | |  |_)  | |  `--'  | |  |____ |  `----.    |  |    .----)   |
- # \______/  |______/   \______/  |_______| \______|    |__|    |_______/
-
 
 #  ______   ______   .___  ___. .______     ______   .__   __.  _______ .__   __. .___________.    _______.
 # /      | /  __  \  |   \/   | |   _  \   /  __  \  |  \ |  | |   ____||  \ |  | |           |   /       |
@@ -37,17 +30,44 @@ class struc_Tile:
 #|  `----.|  `--'  | |  |  |  | |  |      |  `--'  | |  |\   | |  |____ |  |\   |     |  |    .----)   |   
 # \______| \______/  |__|  |__| | _|       \______/  |__| \__| |_______||__| \__|     |__|    |_______/    
                                                                            
-def com_Creature:
-def com_Items:
-def com_Container:                               
-class obj_Actor:
-    """Our basic actor object."""
+class com_Creature:
+    """
+    Creatures have health, and can damage other objects by attacking them.  Can also die.
+    """
+    def __init__(self, name_instance, hp = 10):
 
-    def __init__(self, x, y, sprite):
+        self.name_instance = name_instance
+        self.hp = hp  
+   
+#def com_Items:
+#    pass
+#def com_Container:   
+#                            
+  # ______   .______          __   _______   ______ .___________.    _______.
+ # /  __  \  |   _  \        |  | |   ____| /      ||           |   /       |
+# |  |  |  | |  |_)  |       |  | |  |__   |  ,----'`---|  |----`  |   (----`
+# |  |  |  | |   _  <  .--.  |  | |   __|  |  |         |  |        \   \
+# |  `--'  | |  |_)  | |  `--'  | |  |____ |  `----.    |  |    .----)   |
+ # \______/  |______/   \______/  |_______| \______|    |__|    |_______/
+
+
+
+class obj_Actor:
+"""
+Our basic actor object.
+"""
+
+
+    def __init__(self, x, y, name_object, sprite, creature = None):
         """Create the actor and set its coordinates."""
         self.x = x  # map address (not a pixel address)
         self.y = y  # map address (not a pixel address)
         self.sprite = sprite
+
+        if creature:
+            self.creature = creature
+            creature.owner = self
+            
 
     def draw(self):
         """Have the actor draw itself."""
@@ -167,8 +187,11 @@ def game_initialize():
 
     GAME_MAP = map_create() # Create the game map. Fills the 2D array with values.
     
-    PLAYER = obj_Actor(0, 0, constants.S_PLAYER)
-    ENEMY = obj_Actor(15, 15, constants.S_ENEMY)
+    creature = com_Creature("greg")
+    PLAYER = obj_Actor(0, 0, "python", constants.S_PLAYER, creature = creature_com1)
+
+    creature_com2 = com_Creature("jackie")
+    ENEMY = obj_Actor(15, 15, "crab", constants.S_ENEMY)
 
     
 
